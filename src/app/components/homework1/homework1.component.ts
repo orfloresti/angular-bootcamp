@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Homework1Component {
 
-  active = false;
+  active: boolean = false;
 
   handleClick() {
     this.active = !this.active
