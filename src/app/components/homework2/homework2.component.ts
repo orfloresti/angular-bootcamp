@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './homework2.component.scss'
 })
 export class Homework2Component {
-  letters = ["A", "B", "C"];
+  letters: string[] = ["A", "B", "C"];
 }
