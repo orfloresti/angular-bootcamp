@@ -4,8 +4,6 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-slug',
-  standalone: true,
-  imports: [],
   templateUrl: './slug.component.html',
   styleUrl: './slug.component.scss'
 })
