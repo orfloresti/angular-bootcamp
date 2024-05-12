@@ -2,11 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 const productListRouting: Routes = [
   {
     path: '',
-    component: ContainerComponent
+    component: ContainerComponent,
+    children: [
+      {
+        path: '',
+        component: ProductListComponent
+      }
+    ]
   }
 ]
 

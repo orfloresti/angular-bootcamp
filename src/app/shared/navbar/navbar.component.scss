@@ -1,8 +1,9 @@
-@import '../../../assets/colors.scss';
+@import '../../../colors.scss';
 
 .navbar {
   padding: 1rem;
   border-bottom: 1px solid $line-color;
+  background-color: white;
 }
 
 .logo {
