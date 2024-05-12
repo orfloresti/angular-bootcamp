@@ -1,0 +1,11 @@
+@import '../../../assets/colors.scss';
+
+.navbar {
+  padding: 1rem;
+  border-bottom: 1px solid $line-color;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}

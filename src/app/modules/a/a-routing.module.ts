@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { A1Component } from './components/a1/a1.component';
 import { A2Component } from './components/a2/a2.component';
 import { A3Component } from './components/a3/a3.component';
-import { ZModule } from '../z/z.module';
 
 const aRoutes: Routes = [
   {
@@ -22,15 +21,10 @@ const aRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    A1Component,
-    A2Component,
-    A3Component
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(aRoutes),
-    ZModule
   ],
   exports: [
     RouterModule,
