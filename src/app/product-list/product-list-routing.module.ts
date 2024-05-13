@@ -19,7 +19,8 @@ const productListRouting: Routes = [
 
 @NgModule({
   declarations: [
-    ContainerComponent
+    ContainerComponent,
+    ProductListComponent
   ],
   imports: [
     CommonModule,
