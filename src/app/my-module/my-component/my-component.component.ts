@@ -7,5 +7,6 @@ import { ModuleProviderInjectable } from '../../services/module-provider-injecta
   styleUrl: './my-component.component.scss'
 })
 export class MyComponent{
+  myList = this.moduleProviderInjectable.myList;
   constructor(readonly moduleProviderInjectable: ModuleProviderInjectable){ }
 }

@@ -7,5 +7,6 @@ import { RootInjectableService } from '../services/root-injectable.service';
   styleUrl: './root-injectable-in-app-module.component.scss'
 })
 export class RootInjectableInAppModuleComponent {
+  persistentData = this.rootInjectableService.persistentData;
   constructor(readonly rootInjectableService: RootInjectableService){}
 }
