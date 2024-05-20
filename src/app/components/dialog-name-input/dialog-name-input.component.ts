@@ -7,5 +7,4 @@ import { Component, Inject } from '@angular/core';
 })
 export class DialogNameInputComponent {
   input: string = ''
-  constructor() { }
 }
