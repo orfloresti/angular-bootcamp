@@ -5,12 +5,12 @@ import { capitalizeUtil } from './capitalize.util';
   selector: '[capitalize]',
 })
 export class CapitalizeDirective implements OnInit {
-  @Input() capitalize?: string;
 
   constructor(private element:ElementRef) {}
 
   ngOnInit() {
-    const capitalizedText = capitalizeUtil(this.capitalize);
-    this.element.nativeElement.innerText = capitalizedText;
+    const nativeElement = this.element.nativeElement;
+    const capitalizedText = capitalizeUtil(nativeElement.innerText);
+    nativeElement.innerText = capitalizedText;
   }
 }
