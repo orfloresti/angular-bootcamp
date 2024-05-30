@@ -1,9 +1,10 @@
 <div class="product-wrapper">
     <div class="product-container">
-        <img class="product-image" [src]="photo" alt={{title}} width="300" />
+        <h3 class="product-title">{{title}}</h3>
+        <img class="product-image" [src]="photo" alt={{title}} height="250"/>
         <div class="product-body">
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
+            <p>{{description}}</p>            
         </div>
+        <button class="product-button" [routerLink]="['/product', id]">Más información</button>
     </div>
 </div>
