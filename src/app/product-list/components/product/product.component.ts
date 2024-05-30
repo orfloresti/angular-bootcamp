@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../models/product-interface';
 
 @Component({
   selector: 'app-product',
@@ -7,20 +6,18 @@ import { Product } from '../models/product-interface';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit {
-  @Input() details?: Product;
-  
-  get title() {
-    console.log(new Date())
-    return this.details?.title || '';
-  }
+  @Input() id = "";
+  @Input() title = "";
+  @Input() description = "";
+  @Input() prices: { [tag: string]: number } = { "N/A": 0};
 
-  get price() {
-    return this.details?.prices || {};
+  @Input() photos?: string[];
+  public get photo() : string {
+    if (this.photos && this.photos.length > 0) {
+      return this.photos[0];
+    }
+    return "";
   }
-
-  get description() {
-    return this.details?.description || '';
-  } 
 
   ngOnInit() {
   }

@@ -1,3 +1,11 @@
-<ng-container *ngFor="let product of products">
-  <app-product [details]="product">  </app-product>
-</ng-container>
+<div class="product-list-wrapper">
+  <div class="product-width" *ngFor="let product of products">
+    <app-product
+      [prices]="product.prices"
+      [photos]="product.photos"
+      [title]="product.title"
+      [description]="product.description"
+      [id]="product.id"
+    ></app-product>
+  </div>
+</div>
