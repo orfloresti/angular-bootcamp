@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductComponent } from './components/product/product.component';
+import { SearchInputComponent } from './components/product-list/search-input/search-input.component';
 
 const productListRouting: Routes = [
   {
@@ -23,6 +24,7 @@ const productListRouting: Routes = [
     ContainerComponent,
     ProductListComponent,
     ProductComponent,
+    SearchInputComponent,
   ],
   imports: [
     CommonModule,

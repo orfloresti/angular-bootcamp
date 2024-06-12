@@ -10,7 +10,6 @@ export class SearchInputComponent {
 
   handleChange(value: Event) {
     const input = value.target as HTMLInputElement;
-    debugger;
     this.onFilter.emit(input.value);
   }
 }
