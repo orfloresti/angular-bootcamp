@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 import { SearchInputComponent } from './components/product-list/search-input/search-input.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const productListRouting: Routes = [
   {
@@ -14,8 +15,12 @@ const productListRouting: Routes = [
       {
         path: '',
         component: ProductListComponent
+      },
+      {
+        path: 'product-details/:id',
+        component: ProductDetailsComponent
       }
-    ]
+    ]    
   }
 ]
 
@@ -23,7 +28,8 @@ const productListRouting: Routes = [
   declarations: [
     ContainerComponent,
     ProductListComponent,
-    ProductComponent,
+    ProductCardComponent,
+    ProductDetailsComponent,
     SearchInputComponent,
   ],
   imports: [

@@ -5,12 +5,12 @@
 </div>
 <div class="product-list-wrapper">
   <div class="product-width" *ngFor="let product of products">
-    <app-product
+    <app-product-card
       [prices]="product.prices"
       [photos]="product.photos"
       [title]="product.title"
       [description]="product.description"
       [id]="product.id"
-    ></app-product>
+    ></app-product-card>
   </div>
 </div>
