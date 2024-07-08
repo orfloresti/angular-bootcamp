@@ -3,17 +3,15 @@
         <h3 class="product-title">{{title}}</h3>
         <img class="product-image" [src]="photo" alt={{title}} height="250" />
         <div class="product-body">
-            <p>{{description}}</p>
+            <p>{{description | slice:0:30}}...</p>
 
-            <div class="prices-wrapper">
-                <app-price-tag 
-                    *ngFor="let price of prices"
-                    [name]="price.key"
-                    [price]="price.value"
-                    [offerDiscount]="offerDiscount"
-                >
-                </app-price-tag>
-            </div>
+            <app-price-tag 
+                *ngFor="let price of prices"
+                [name]="price.key"
+                [price]="price.value"
+                [offerDiscount]="offerDiscount"
+            >
+            </app-price-tag>
         </div>
         <button class="product-button" [routerLink]="['/product-list', 'details', id]">Más información</button>
     </div>

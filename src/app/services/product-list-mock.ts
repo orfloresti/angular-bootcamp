@@ -6,7 +6,10 @@ export const productList: Product[] = [
       "screechOwl": 15.10,
       "barnOwl": 18.45,
     },
-    photos: ["https://api.slingacademy.com/public/sample-photos/1.jpeg"],
+    photos: [
+      "https://api.slingacademy.com/public/sample-photos/1.jpeg", 
+      "https://api.slingacademy.com/public/sample-photos/21.jpeg"
+    ],
     title: "Defense the travel",
     id: "1",
     description: "Leader structure safe or black late wife newspaper her pick central forget single likely.",

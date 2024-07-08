@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { productList } from './product-list-mock';
+import { Product } from '../product-list/components/models/product-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,16 @@ export class ProductService {
 
   products = productList;
 
-  getProduct(id: string) {
+  getProduct(id: string): Observable<Product> {
     const product = productList.find(product => product.id === id);
-    return of(product);
+    
+    if( product ) {
+      return of(product);
+    }
+    else{
+      return new Observable( subs => subs.error('Not found') );
+    }
+    
   }
 
   getProductList(offset: number, itemsPerPage: number) {

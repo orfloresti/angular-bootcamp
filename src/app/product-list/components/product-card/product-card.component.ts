@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 
-interface Price { key: string, value: number }
+export interface Price { key: string, value: number }
 
 @Component({
   selector: 'app-product-card',
