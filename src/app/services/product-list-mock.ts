@@ -9,7 +9,8 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/1.jpeg"],
     title: "Defense the travel",
     id: "1",
-    description: "Leader structure safe or black late wife newspaper her pick central forget single likely."
+    description: "Leader structure safe or black late wife newspaper her pick central forget single likely.",
+    offerDiscount: 10
   },
   {
     prices: {
@@ -40,7 +41,8 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/4.jpeg"],
     title: "Table husband",
     id: "4",
-    description: "Skill drug college contain herself future seat human yes approach how then maybe public summer play commercial anything woman include million body measure government clearly question quickly parent."
+    description: "Skill drug college contain herself future seat human yes approach how then maybe public summer play commercial anything woman include million body measure government clearly question quickly parent.",
+    offerDiscount: 5
   },
   {
     prices: {
@@ -60,7 +62,8 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/6.jpeg"],
     title: "Apply future",
     id: "6",
-    description: "Training beautiful age four skin cultural hundred environmental ability blood go physical relate produce tough open police."
+    description: "Training beautiful age four skin cultural hundred environmental ability blood go physical relate produce tough open police.",
+    offerDiscount: 8,
   },
   {
     prices: {
@@ -74,7 +77,7 @@ export const productList: Product[] = [
   },
   {
     prices: {
-      "leatherback":65.52,
+      "leatherback": 65.52,
       "loggerhead": 87.35
     },
     photos: ["https://api.slingacademy.com/public/sample-photos/8.jpeg"],
@@ -111,7 +114,8 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/11.jpeg"],
     title: "Commercial kitchen",
     id: "11",
-    description: "Their base help outside often grow address himself product issue watch pick kid all break ever threat try learn edge degree name order everyone seem interest democratic card reach safe war gun expert."
+    description: "Their base help outside often grow address himself product issue watch pick kid all break ever threat try learn edge degree name order everyone seem interest democratic card reach safe war gun expert.",
+    offerDiscount: 20,
   },
   {
     prices: {
@@ -203,6 +207,7 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/20.jpeg"],
     title: "No white success",
     id: "20",
-    description: "General free fly decide edge yeah their skill work television those claim pull out player leg ok small minute return morning minute son down model series team hot knowledge."
+    description: "General free fly decide edge yeah their skill work television those claim pull out player leg ok small minute return morning minute son down model series team hot knowledge.",
+    offerDiscount: 5
   }
 ]

@@ -1,6 +1,6 @@
 <div class="input-wrapper">
   <div class="input-area">
-    <app-search-input></app-search-input>
+    <app-search-input (onFilter)="handleFilter($event)"></app-search-input>
   </div>
 </div>
 <div class="product-list-wrapper">
@@ -11,6 +11,7 @@
       [title]="product.title"
       [description]="product.description"
       [id]="product.id"
+      [offerDiscount]="product.offerDiscount"
     ></app-product-card>
   </div>
 
@@ -20,6 +21,6 @@
   <app-paginator
     [itemsPerPage]="5"
     [results]="total"
-    [currentPage]="page"
+    [currentPage]="currentPage"
   ></app-paginator>
 </div>

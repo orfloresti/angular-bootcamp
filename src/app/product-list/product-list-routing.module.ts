@@ -7,6 +7,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { SearchInputComponent } from './components/product-list/search-input/search-input.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { PriceTagComponent } from './components/price-tag/price-tag.component';
+import { RoundPipe } from '../pipes/round.pipe';
 
 const productListRouting: Routes = [
   {
@@ -15,7 +17,7 @@ const productListRouting: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'page/0',
+        redirectTo: 'page/1',
         pathMatch: 'full'
       },
       {
@@ -38,6 +40,8 @@ const productListRouting: Routes = [
     ProductDetailsComponent,
     SearchInputComponent,
     PaginatorComponent,
+    PriceTagComponent,
+    RoundPipe,
   ],
   imports: [
     CommonModule,
