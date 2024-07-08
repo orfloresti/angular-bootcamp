@@ -1,0 +1,7 @@
+<div class="paginatior-wrapper">
+  <button class="paginator-button" (click)="onForwardPage()"> &lt; </button>
+  <button class="paginator-button" *ngFor="let button of buttons" (click)="onClickButton(button)">
+    {{button}}
+  </button>
+  <button class="paginator-button" (click)="onNextPage()"> &gt; </button>
+</div>

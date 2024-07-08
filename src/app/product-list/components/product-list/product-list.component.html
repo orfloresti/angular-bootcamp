@@ -13,4 +13,13 @@
       [id]="product.id"
     ></app-product-card>
   </div>
+
+</div>
+
+<div class="paginator-wapper">
+  <app-paginator
+    [itemsPerPage]="5"
+    [results]="total"
+    [currentPage]="page"
+  ></app-paginator>
 </div>

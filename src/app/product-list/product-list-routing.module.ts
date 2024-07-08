@@ -6,6 +6,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { SearchInputComponent } from './components/product-list/search-input/search-input.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 const productListRouting: Routes = [
   {
@@ -36,6 +37,7 @@ const productListRouting: Routes = [
     ProductCardComponent,
     ProductDetailsComponent,
     SearchInputComponent,
+    PaginatorComponent,
   ],
   imports: [
     CommonModule,

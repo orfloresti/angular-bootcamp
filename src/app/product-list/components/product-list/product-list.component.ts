@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { Product } from '../models/product-interface';
 import { ActivatedRoute } from '@angular/router';
@@ -9,10 +9,11 @@ import { Subscription, switchMap } from 'rxjs';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnDestroy {
   products: Product[] = [];
   total: number = 0;
   products$: Subscription = new Subscription();
+  page: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,8 +21,8 @@ export class ProductListComponent {
   ) {
     this.products$.add(this.route.params.pipe(
       switchMap( params => {
-        const page = params['page'];
-        return this.product.getProductList( Number(page), 5);
+        this.page = params['page'];
+        return this.product.getProductList( Number(this.page), 5);
       })
     ).subscribe( products => {
       this.products = products.data;

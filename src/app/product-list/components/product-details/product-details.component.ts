@@ -14,7 +14,6 @@ export class ProductDetailsComponent {
 
     this.route.params.subscribe(params => {
       this.id = params['id'];
-
       this.product.getProduct(this.id).subscribe( details => console.log(details) );
     });
   }
