@@ -3,6 +3,14 @@
     <app-search-input (onFilter)="handleFilter($event)"></app-search-input>
   </div>
 </div>
+
+<div class="actions-wrapper">
+  <label>
+    <input type="checkbox" [checked]="offertsSelected" (change)="onOfferts()">
+    Offerts
+  </label>
+</div>
+
 <div class="product-list-wrapper">
   <div class="product-width" *ngFor="let product of products">
     <app-product-card

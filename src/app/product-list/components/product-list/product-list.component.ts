@@ -14,6 +14,7 @@ export class ProductListComponent implements OnDestroy {
   products: Product[] = [];
   total: number = 0;
   currentPage: number = 0;
+  offertsSelected: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -41,6 +42,23 @@ export class ProductListComponent implements OnDestroy {
         }
       )
     )
+  }
+
+  onOfferts() {
+    this.offertsSelected = !this.offertsSelected;
+    if(this.offertsSelected) {
+        this.service$.add( 
+          this.product.getOfferts( 1, 5 ).subscribe(
+            response => {
+              this.products = response.data;
+              this.total = response.total;
+            }
+          )
+        )
+    }
+    else {
+      this.handleFilter('');
+    }
   }
 
   ngOnDestroy() {

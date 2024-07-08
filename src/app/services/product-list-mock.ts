@@ -96,7 +96,8 @@ export const productList: Product[] = [
     photos: ["https://api.slingacademy.com/public/sample-photos/9.jpeg"],
     title: "Per nature research",
     id: "9",
-    description: "Nature focus wonder behind magazine pattern degree far without tree consider."
+    description: "Nature focus wonder behind magazine pattern degree far without tree consider.",
+    offerDiscount: 10
   },
   {
     prices: {

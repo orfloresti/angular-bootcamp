@@ -39,4 +39,14 @@ export class ProductService {
       total: this.products.length,
     })
   }
+
+  getOfferts(offset: number, itemsPerPage: number) {
+    this.products = productList.filter( product => product.offerDiscount );
+    const pageList = this.products.slice((offset - 1) * itemsPerPage, ((offset - 1) * itemsPerPage) + itemsPerPage);
+
+    return of({
+      data: pageList,
+      total: this.products.length,
+    })
+  }
 }
