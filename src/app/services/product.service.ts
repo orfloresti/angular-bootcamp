@@ -13,7 +13,10 @@ export class ProductService {
   }
 
   getProductList(offset: number, results: number) {
-    const list = productList.slice(offset, results);
-    return of(list);
+    const list = productList.slice(offset * results, (offset * results) + results);
+    return of({
+      data: list,
+      total: productList.length,
+    });
   }
 }

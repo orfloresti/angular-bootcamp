@@ -13,6 +13,11 @@ const productListRouting: Routes = [
     component: ContainerComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'page/0',
+        pathMatch: 'full'
+      },
+      {
         path: 'page/:page',
         component: ProductListComponent
       },
