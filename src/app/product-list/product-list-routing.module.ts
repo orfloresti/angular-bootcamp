@@ -13,11 +13,11 @@ const productListRouting: Routes = [
     component: ContainerComponent,
     children: [
       {
-        path: '',
+        path: 'page/:page',
         component: ProductListComponent
       },
       {
-        path: 'product-details/:id',
+        path: 'details/:id',
         component: ProductDetailsComponent
       }
     ]
