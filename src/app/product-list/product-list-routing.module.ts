@@ -20,8 +20,8 @@ const productListRouting: Routes = [
         path: 'product-details/:id',
         component: ProductDetailsComponent
       }
-    ]    
-  }
+    ]
+  },
 ]
 
 @NgModule({
