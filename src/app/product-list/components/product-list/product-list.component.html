@@ -5,6 +5,9 @@
 </div>
 
 <div class="actions-wrapper">
+  <button class="add-button" (click)="onNewProduct()">
+    Add Item
+  </button>
   <label>
     <input type="checkbox" [checked]="offertsSelected" (change)="onOfferts()">
     Offerts

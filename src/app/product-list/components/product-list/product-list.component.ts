@@ -22,20 +22,20 @@ export class ProductListComponent implements OnDestroy {
     private router: Router
   ) {
     this.service$.add(this.route.params.pipe(
-      switchMap( params => {
+      switchMap(params => {
         this.currentPage = params['page'];
-        return this.product.getProductList( Number(this.currentPage), 5);
+        return this.product.getProductList(Number(this.currentPage), 5);
       })
-    ).subscribe( products => {
+    ).subscribe(products => {
       this.products = products.data;
       this.total = products.total;
-    }));    
+    }));
   }
 
   handleFilter(text: string) {
     this.router.navigate(["/product-list", "page", 1]);
     this.service$.add(
-      this.product.filterProducts( text, 1, 5  ).subscribe(
+      this.product.filterProducts(text, 1, 5).subscribe(
         response => {
           this.products = response.data;
           this.total = response.total;
@@ -46,19 +46,23 @@ export class ProductListComponent implements OnDestroy {
 
   onOfferts() {
     this.offertsSelected = !this.offertsSelected;
-    if(this.offertsSelected) {
-        this.service$.add( 
-          this.product.getOfferts( 1, 5 ).subscribe(
-            response => {
-              this.products = response.data;
-              this.total = response.total;
-            }
-          )
+    if (this.offertsSelected) {
+      this.service$.add(
+        this.product.getOfferts(1, 5).subscribe(
+          response => {
+            this.products = response.data;
+            this.total = response.total;
+          }
         )
+      )
     }
     else {
       this.handleFilter('');
     }
+  }
+
+  onNewProduct() {
+    this.router.navigate(["/product-list", "new-product"]);
   }
 
   ngOnDestroy() {

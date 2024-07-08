@@ -10,6 +10,8 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
 import { PriceTagComponent } from './components/price-tag/price-tag.component';
 import { RoundPipe } from '../pipes/round.pipe';
 import { OfferPipe } from '../pipes/offer.pipe';
+import { NewProductComponent } from './components/new-product/new-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const productListRouting: Routes = [
   {
@@ -28,6 +30,10 @@ const productListRouting: Routes = [
       {
         path: 'details/:id',
         component: ProductDetailsComponent
+      },
+      {
+        path: 'new-product',
+        component: NewProductComponent
       }
     ]
   },
@@ -42,11 +48,13 @@ const productListRouting: Routes = [
     SearchInputComponent,
     PaginatorComponent,
     PriceTagComponent,
+    NewProductComponent,
     RoundPipe,
     OfferPipe,
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild(productListRouting)
   ]
 })

@@ -3,6 +3,18 @@ import { Observable, of } from 'rxjs';
 import { productList } from './product-list-mock';
 import { Product } from '../product-list/components/models/product-interface';
 
+interface ProductForm {
+  title: string,
+  description: string,
+  photos: string[],
+  prices: {
+    key: string,
+    value: number,
+  }[],
+  offerDiscount: number,
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -49,4 +61,19 @@ export class ProductService {
       total: this.products.length,
     })
   }
+
+  saveProduct(product: ProductForm) {
+    let prices: { [tag: string]: number } = {};
+
+    product.prices.forEach(element => {
+      prices[element.key] = element.value
+    });
+
+    this.products.push({ 
+      ...product,
+      prices,
+      id: `${this.products.length + 1}`,
+    })
+  }
 }
+
