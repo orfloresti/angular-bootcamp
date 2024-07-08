@@ -1,5 +1,5 @@
 <p class="price-tag" [ngClass]="{ 'offer': !!offerDiscount && offerDiscount > 0 }">
   <b>{{name}}: </b>
   <span [ngStyle]="{'text-decoration': !!offerDiscount && offerDiscount > 0 ? 'line-through' : 'none'}">{{price | round}} </span>
-  <span class="" *ngIf="!!offerDiscount && offerDiscount > 0"> <b>{{price | round}} </b></span>
+  <span class="" *ngIf="!!offerDiscount && offerDiscount > 0"> <b>{{price | offer:offerDiscount }} </b></span>
 </p>

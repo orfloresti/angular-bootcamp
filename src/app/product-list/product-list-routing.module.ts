@@ -9,6 +9,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { PriceTagComponent } from './components/price-tag/price-tag.component';
 import { RoundPipe } from '../pipes/round.pipe';
+import { OfferPipe } from '../pipes/offer.pipe';
 
 const productListRouting: Routes = [
   {
@@ -42,6 +43,7 @@ const productListRouting: Routes = [
     PaginatorComponent,
     PriceTagComponent,
     RoundPipe,
+    OfferPipe,
   ],
   imports: [
     CommonModule,
