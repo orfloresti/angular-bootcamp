@@ -1,0 +1,8 @@
+<h2>{{details.title}}</h2>
+<img class="product-image" *ngFor="let photo of details.photos" [src]="photo" alt={{details.title}} height="250" />
+<p>{{details.description}}</p>
+<app-price-tag 
+  *ngFor="let price of prices" 
+  [name]="price.key" [price]="price.value"
+  [offerDiscount]="details.offerDiscount">
+</app-price-tag>

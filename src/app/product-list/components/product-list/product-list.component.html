@@ -1,0 +1,37 @@
+<div class="input-wrapper">
+  <div class="input-area">
+    <app-search-input (onFilter)="handleFilter($event)"></app-search-input>
+  </div>
+</div>
+
+<div class="actions-wrapper">
+  <button class="add-button" (click)="onNewProduct()">
+    Add Item
+  </button>
+  <label>
+    <input type="checkbox" [checked]="offertsSelected" (change)="onOfferts()">
+    Offerts
+  </label>
+</div>
+
+<div class="product-list-wrapper">
+  <div class="product-width" *ngFor="let product of products">
+    <app-product-card
+      [prices]="product.prices"
+      [photos]="product.photos"
+      [title]="product.title"
+      [description]="product.description"
+      [id]="product.id"
+      [offerDiscount]="product.offerDiscount"
+    ></app-product-card>
+  </div>
+
+</div>
+
+<div class="paginator-wapper">
+  <app-paginator
+    [itemsPerPage]="5"
+    [results]="total"
+    [currentPage]="currentPage"
+  ></app-paginator>
+</div>

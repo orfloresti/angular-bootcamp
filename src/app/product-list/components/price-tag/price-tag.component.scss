@@ -1,0 +1,13 @@
+@import "/home/user/angular-bootcamp/src/colors.scss";
+
+.price-tag {
+  margin: .2rem;
+  background-color: $bright-gray-600;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.offer {
+  background-color: orange;
+  color: white;
+}
