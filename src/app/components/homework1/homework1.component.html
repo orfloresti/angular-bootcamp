@@ -1,0 +1,7 @@
+<h2>Directivas de atributo</h2>
+<button (click)="handleClick()">Toggle Active</button>
+<br/>
+<span [ngClass]="{'red': active}">Hello for ngClass</span>
+<br/>
+<span [ngStyle]="{'color': active ? 'red': ''}">Hello for ngStyle</span>
+<p>Active: {{active}}</p>
